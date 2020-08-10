@@ -14,6 +14,7 @@ import {
   View,
   Text,
   StatusBar,
+  NativeModules,
 } from 'react-native';
 
 import {
@@ -40,7 +41,16 @@ const App: () => React$Node = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
+              <Text
+                style={styles.sectionTitle}
+                onPress={() =>
+                  NativeModules.ReactIntentModule.startActivityFromJS(
+                    'uk.co.car.lapp.BasicMapActivity',
+                    'navigateJson',
+                  )
+                }>
+                Test Here Map
+              </Text>
               <Text style={styles.sectionDescription}>
                 Edit <Text style={styles.highlight}>App.js</Text> to change this
                 screen and then come back to see your edits.

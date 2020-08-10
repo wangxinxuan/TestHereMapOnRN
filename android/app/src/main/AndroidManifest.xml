@@ -1,7 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.driverapp">
+  package="uk.co.car.lapp">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
     <application
       android:name=".MainApplication"
@@ -22,6 +25,17 @@
         </intent-filter>
       </activity>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+      <activity android:name="uk.co.car.lapp.BasicMapActivity" />
+
+        <meta-data
+            android:name="com.here.android.maps.appid"
+            android:value="WwYLQRNkKq5VEKjVNP6Z" />
+        <meta-data
+            android:name="com.here.android.maps.apptoken"
+            android:value="Z1zZan29FOIGp3ndChwmQg" />
+        <meta-data
+            android:name="com.here.android.maps.license.key"
+            android:value="FX0UP/UZtnCagX91EFzT9tAHilJXPXXh2Yfnrgz/xfcyz1Zkgm62GNThdOUtZFfRNrJIT0R54uFFCAgyteKE0X4V1cX3w/XU3quiNjTxQ8YdF8B/14iINY7GdDRGkAsSmLRpu4+7RsayAXyb/ihG8DO3YnT306uDWjonilxvZ3CkywrnJlimClIve4z2owh4xfX56O2CcTSMBMj2AKfRWHxx6tQOQKJb0u8nVQnL1eOX24xlXDMd7F18pDJVq3hZRLSMqJ89/Qik/LoqwuGsv4Jgtups5KoH4ry4h1fkjDxmUcO0+UDFyAuPKidCQfrLO9mLaMlknOnc1YTxpFSBGlPFNlhgSylOSCuUav/9Snq33bSiqJFLsWyS7vfy8opHQSkGyyutmg2bKmLsTd/YflzPVmzJOBlhuwzpWMiGaxbNk7OjWyhYgiglnn0jTUjThArmn8KvCB4Q9st4UDqKsvWO0A8JZ4UiKO+nrJwiA7tBx7WjDqxMF4a3xpmnlyhC+S2jekRgYbCxUGihqGhOdxPnIrjrO6hMmi9aXL8QgjcNSHAU6KrNVBJkVMxiUGl9SPPVL8I6VCtuaNy9guf+68FwJ2Mzmjmnm+wBy9Sg23n8PzhUCYm+oysUZeBjNZuX2iTRIlnEkdMz6/JOaQLb7iULagxnMcDmjTWDlPkTMfo=" />
     </application>
 
 </manifest>
